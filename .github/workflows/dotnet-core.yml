@@ -33,7 +33,7 @@ jobs:
 
     - name: Pack common logic project for NuGet
       run: dotnet pack AnimalAdoption.Common.Logic.csproj --configuration Release --no-build -p:PackageVersion=$PKG_VERSION
-      working-directory: ${{ github.workspace }}\AnimalAdoption.Common.Logic\
+      working-directory: ${{ github.workspace }}/AnimalAdoption.Common.Logic/
       shell: bash
       env:
         PKG_VERSION: 1.0.3
