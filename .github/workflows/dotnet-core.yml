@@ -38,8 +38,7 @@ jobs:
       env:
         PKG_VERSION: 1.0.3
     
-    - name: Setup Nuget.exe
-      uses: warrenbuckley/Setup-Nuget@v1
+    
       
     - name: Add GPR NuGet source
       run: nuget source add -Name "GitHub" -Source "https://nuget.pkg.github.com/wingedwarrior/index.json" -UserName wingedwarrior -Password ${{ secrets.ANIMAL_ADOPTION_PAT }}
@@ -49,4 +48,4 @@ jobs:
       
     - name: Push NuGet package
       run: nuget push *.nupkg -Source "GitHub" -SkipDuplicate
-      working-directory: ${{ github.workspace }}\AnimalAdoption.Common.Logic\bin\Release\
+      working-directory: ${{ github.workspace }}/AnimalAdoption.Common.Logic/bin/Release/
