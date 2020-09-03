@@ -32,7 +32,7 @@ jobs:
       run: dotnet test  ${{ github.workspace }}/AnimalAdoption.Web.Portal.UnitTests/AnimalAdoption.Web.Portal.UnitTests.csproj --no-restore --verbosity normal
 
     - name: Pack common logic project for NuGet
-      run: dotnet pack ${{ github.workspace }}/AnimalAdoption.Common.Logic.csproj --configuration Release --no-build -p:PackageVersion=$PKG_VERSION
+      run: dotnet pack AnimalAdoption.Common.Logic.csproj --configuration Release --no-build -p:PackageVersion=$PKG_VERSION
       working-directory: ${{ github.workspace }}\AnimalAdoption.Common.Logic\
       shell: bash
       env:
