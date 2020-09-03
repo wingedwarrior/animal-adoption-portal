@@ -41,4 +41,4 @@ jobs:
         # NuGet package id, used for version detection & defaults to project name
         PACKAGE_NAME: AnimalAdoption.Common.Logic
         NUGET_KEY: ${{ secrets.ANIMAL_ADOPTION_PAT }}
-         
+        NUGET_SOURCE: https://nuget.pkg.github.com/wingedwarrior
