@@ -40,4 +40,5 @@ jobs:
         PROJECT_FILE_PATH: ${{ github.workspace }}/AnimalAdoption.Common.Logic/AnimalAdoption.Common.Logic.csproj
         # NuGet package id, used for version detection & defaults to project name
         PACKAGE_NAME: AnimalAdoption.Common.Logic
+        NUGET_KEY: $ANIMAL_ADOPTION_PAT
          
